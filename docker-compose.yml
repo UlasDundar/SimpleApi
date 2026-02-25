@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  simpleapi:
+    build: .
+    container_name: simpleapi-container
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:   # <- bu satır service altında olmalı
+      - ./Logs:/app/Logs

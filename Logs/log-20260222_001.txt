@@ -1,0 +1,49 @@
+2026-02-22 15:40:02.604 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 15:40:02.739 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-22 15:40:02.742 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 15:40:02.743 +03:00 [INF] Hosting environment: Development
+2026-02-22 15:40:02.744 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-22 15:40:23.312 +03:00 [INF] Application is shutting down...
+2026-02-22 15:40:44.483 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 15:40:44.555 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-22 15:40:44.558 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 15:40:44.560 +03:00 [INF] Hosting environment: Development
+2026-02-22 15:40:44.561 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-22 15:43:19.375 +03:00 [INF] Application is shutting down...
+2026-02-22 15:47:05.492 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 15:47:05.562 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-22 15:47:05.566 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 15:47:05.567 +03:00 [INF] Hosting environment: Development
+2026-02-22 15:47:05.568 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-22 15:47:15.908 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/ - null null
+2026-02-22 15:47:15.973 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-22 15:47:16.117 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/ - 404 0 null 211.2056ms
+2026-02-22 15:47:16.142 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/, Response status code: 404
+2026-02-22 15:47:29.879 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/health - null null
+2026-02-22 15:47:29.910 +03:00 [INF] Executing endpoint 'Health checks'
+2026-02-22 15:47:31.185 +03:00 [INF] Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-22 15:47:31.354 +03:00 [INF] Executed endpoint 'Health checks'
+2026-02-22 15:47:31.365 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/health - 200 null application/json; charset=utf-8 1488.2836ms
+2026-02-22 15:47:31.511 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/favicon.ico - null null
+2026-02-22 15:47:31.523 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/favicon.ico - 404 0 null 11.3192ms
+2026-02-22 15:47:31.530 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/favicon.ico, Response status code: 404
+2026-02-22 15:48:34.527 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger - null null
+2026-02-22 15:48:34.538 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger - 301 0 null 10.9677ms
+2026-02-22 15:48:34.585 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - null null
+2026-02-22 15:48:34.586 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - null null
+2026-02-22 15:48:34.588 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.js - null null
+2026-02-22 15:48:34.589 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-22 15:48:34.590 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-22 15:48:34.611 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - 200 23649 text/css 25.705ms
+2026-02-22 15:48:34.624 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 35.6504ms
+2026-02-22 15:48:34.638 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 47.64ms
+2026-02-22 15:48:34.638 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 51.8122ms
+2026-02-22 15:48:34.698 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.js - 200 null application/javascript;charset=utf-8 109.3943ms
+2026-02-22 15:48:34.794 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-22 15:48:34.944 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 150.2545ms
+2026-02-22 15:52:07.257 +03:00 [INF] Application is shutting down...
+2026-02-22 12:55:42.777 +00:00 [INF] Now listening on: http://[::]:8080
+2026-02-22 12:55:42.817 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 12:55:42.818 +00:00 [INF] Hosting environment: Production
+2026-02-22 12:55:42.819 +00:00 [INF] Content root path: /app

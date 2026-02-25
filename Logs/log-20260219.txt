@@ -1,0 +1,13 @@
+2026-02-19 16:44:02.753 +00:00 [INF] Now listening on: http://[::]:8080
+2026-02-19 16:44:02.811 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-19 16:44:02.812 +00:00 [INF] Hosting environment: Production
+2026-02-19 16:44:02.812 +00:00 [INF] Content root path: /app
+2026-02-19 16:44:51.166 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/sms/send - application/json 66
+2026-02-19 16:44:51.189 +00:00 [WRN] Failed to determine the https port for redirect.
+2026-02-19 16:44:51.192 +00:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-19 16:44:51.201 +00:00 [INF] Route matched with {action = "SendSms", controller = "Sms"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SendSms(SimpleApi.Models.SendSmsRequest) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-19 16:44:51.239 +00:00 [INF] SMS isteği alındı. Numara: 5551112233
+2026-02-19 16:44:51.243 +00:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-19 16:44:51.250 +00:00 [INF] Executed action SimpleApi.Controllers.SmsController.SendSms (SimpleApi) in 46.0407ms
+2026-02-19 16:44:51.251 +00:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-19 16:44:51.258 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/sms/send - 200 null application/json; charset=utf-8 93.0361ms

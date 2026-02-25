@@ -1,0 +1,922 @@
+2026-02-20 16:51:21.593 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 16:51:21.623 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 16:51:21.625 +03:00 [INF] Hosting environment: Development
+2026-02-20 16:51:21.626 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 16:51:30.687 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/ - null null
+2026-02-20 16:51:30.824 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 16:51:30.845 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/ - 404 0 null 162.6789ms
+2026-02-20 16:51:30.881 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/, Response status code: 404
+2026-02-20 16:51:53.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 16:51:53.404 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 304 null null 178.712ms
+2026-02-20 16:51:53.469 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - null null
+2026-02-20 16:51:53.470 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 16:51:53.471 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - null null
+2026-02-20 16:51:53.486 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-20 16:51:53.486 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.js - null null
+2026-02-20 16:51:53.529 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - 304 null null 50.1389ms
+2026-02-20 16:51:53.529 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 48.983ms
+2026-02-20 16:51:53.530 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - 304 null null 44.0002ms
+2026-02-20 16:51:53.535 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.js - 304 null null 48.6252ms
+2026-02-20 16:51:53.537 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - 304 null null 65.7638ms
+2026-02-20 16:51:53.726 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 16:51:53.742 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 16:51:53.748 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 200 628 image/png 6.006ms
+2026-02-20 16:51:53.923 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.8321ms
+2026-02-20 16:52:42.219 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/sms/send - application/json 66
+2026-02-20 16:52:42.226 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:52:42.276 +03:00 [INF] Route matched with {action = "SendSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendSms(SimpleApi.Models.SendSmsRequest) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 16:52:42.683 +03:00 [INF] SMS isteği alındı. Numara: 5551112233
+2026-02-20 16:52:44.461 +03:00 [ERR] An error occurred using the connection to database 'NeuroPulse' on server 'localhost\SQLEXPRESS'.
+2026-02-20 16:52:44.491 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SimpleApi.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): The certificate chain was issued by an authority that is not trusted.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ClientConnectionId:d87bc71c-1204-40ca-875b-97459b7d19ce
+Error Number:-2146893019,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): The certificate chain was issued by an authority that is not trusted.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ClientConnectionId:d87bc71c-1204-40ca-875b-97459b7d19ce
+Error Number:-2146893019,State:0,Class:20
+2026-02-20 16:52:44.526 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.SendSms (SimpleApi) in 2239.2101ms
+2026-02-20 16:52:44.529 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:52:44.535 +03:00 [ERR] Beklenmeyen hata oluştu
+Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+ ---> System.ComponentModel.Win32Exception (0x80090325): The certificate chain was issued by an authority that is not trusted.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.SNIWritePacket(PacketHandle packet, UInt32& sniError, Boolean canAccumulate, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WriteSni(Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.WritePacket(Byte flushMode, Boolean canAccumulate)
+   at Microsoft.Data.SqlClient.TdsParser.TdsLogin(SqlLogin rec, FeatureExtension requestedFeatures, SessionData recoverySessionData, FederatedAuthenticationFeatureExtensionData fedAuthFeatureExtensionData, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.Login(ServerInfo server, TimeoutTimer timeout, String newPassword, SecureString newSecurePassword, SqlConnectionEncryptOption encrypt)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SimpleApi.Controllers.SmsController.SendSms(SendSmsRequest request) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\SmsController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+ClientConnectionId:d87bc71c-1204-40ca-875b-97459b7d19ce
+Error Number:-2146893019,State:0,Class:20
+2026-02-20 16:52:44.624 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/sms/send - 500 null application/json 2405.2847ms
+2026-02-20 16:54:05.771 +03:00 [INF] Application is shutting down...
+2026-02-20 16:54:42.879 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 16:54:42.903 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 16:54:42.904 +03:00 [INF] Hosting environment: Development
+2026-02-20 16:54:42.905 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 16:54:51.144 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/sms/send - application/json 66
+2026-02-20 16:54:51.201 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 16:54:51.206 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:54:51.232 +03:00 [INF] Route matched with {action = "SendSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendSms(SimpleApi.Models.SendSmsRequest) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 16:54:51.479 +03:00 [INF] SMS isteği alındı. Numara: 5551112233
+2026-02-20 16:54:52.734 +03:00 [ERR] Failed executing DbCommand (69ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [SmsMessages] ([Message], [Phone], [SentAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-02-20 16:54:52.795 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SimpleApi.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SmsMessages'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f48e9f71-bcbc-4fd0-8f32-173bbe3d2606
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SmsMessages'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f48e9f71-bcbc-4fd0-8f32-173bbe3d2606
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-02-20 16:54:52.828 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.SendSms (SimpleApi) in 1587.4642ms
+2026-02-20 16:54:52.834 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:54:52.837 +03:00 [ERR] Beklenmeyen hata oluştu
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'SmsMessages'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:f48e9f71-bcbc-4fd0-8f32-173bbe3d2606
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SimpleApi.Controllers.SmsController.SendSms(SendSmsRequest request) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\SmsController.cs:line 40
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+2026-02-20 16:54:52.884 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/sms/send - 500 null application/json 1742.5649ms
+2026-02-20 16:57:05.936 +03:00 [INF] Application is shutting down...
+2026-02-20 16:59:19.872 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-20 16:59:19.920 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-20 16:59:19.951 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-20 16:59:20.041 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-20 16:59:20.053 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-20 16:59:20.058 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-20 16:59:20.074 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-20 16:59:20.081 +03:00 [INF] Applying migration '20260220135914_InitialCreate'.
+2026-02-20 16:59:20.107 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [SmsMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [Phone] nvarchar(max) NOT NULL,
+    [Message] nvarchar(max) NOT NULL,
+    [SentAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_SmsMessages] PRIMARY KEY ([Id])
+);
+2026-02-20 16:59:20.119 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260220135914_InitialCreate', N'10.0.3');
+2026-02-20 16:59:20.132 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-02-20 16:59:42.587 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 16:59:42.607 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 16:59:42.609 +03:00 [INF] Hosting environment: Development
+2026-02-20 16:59:42.611 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 16:59:48.268 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/sms/send - application/json 66
+2026-02-20 16:59:48.309 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 16:59:48.314 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:59:48.338 +03:00 [INF] Route matched with {action = "SendSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendSms(SimpleApi.Models.SendSmsRequest) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 16:59:48.542 +03:00 [INF] SMS isteği alındı. Numara: 5551112233
+2026-02-20 16:59:49.809 +03:00 [INF] Executed DbCommand (90ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [SmsMessages] ([Message], [Phone], [SentAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-02-20 16:59:49.905 +03:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 16:59:49.938 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.SendSms (SimpleApi) in 1589.8696ms
+2026-02-20 16:59:49.943 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 16:59:49.959 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/sms/send - 200 null application/json; charset=utf-8 1692.3784ms
+2026-02-20 17:00:43.489 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 17:00:43.618 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 304 null null 130.4474ms
+2026-02-20 17:00:43.658 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - null null
+2026-02-20 17:00:43.661 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 17:00:43.663 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - null null
+2026-02-20 17:00:43.665 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-20 17:00:43.665 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.js - null null
+2026-02-20 17:00:43.692 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 31.0379ms
+2026-02-20 17:00:43.692 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - 304 null null 34.1002ms
+2026-02-20 17:00:43.705 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - 304 null null 42.3482ms
+2026-02-20 17:00:43.718 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - 304 null null 52.7016ms
+2026-02-20 17:00:43.724 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.js - 304 null null 58.8528ms
+2026-02-20 17:00:43.890 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 17:00:43.894 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 17:00:43.906 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 12.0247ms
+2026-02-20 17:00:44.083 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 192.9458ms
+2026-02-20 17:00:53.417 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Sms - null null
+2026-02-20 17:00:53.422 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.GetAllSms (SimpleApi)'
+2026-02-20 17:00:53.440 +03:00 [INF] Route matched with {action = "GetAllSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllSms() on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 17:00:53.793 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Message], [s].[Phone], [s].[SentAt]
+FROM [SmsMessages] AS [s]
+2026-02-20 17:00:53.809 +03:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[SimpleApi.Models.SmsEntity, SimpleApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 17:00:53.832 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.GetAllSms (SimpleApi) in 387.61ms
+2026-02-20 17:00:53.834 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.GetAllSms (SimpleApi)'
+2026-02-20 17:00:53.835 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Sms - 200 null application/json; charset=utf-8 418.4ms
+2026-02-20 17:01:32.663 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Sms/1 - null null
+2026-02-20 17:01:32.668 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.GetSmsById (SimpleApi)'
+2026-02-20 17:01:32.686 +03:00 [INF] Route matched with {action = "GetSmsById", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetSmsById(Int32) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 17:01:32.916 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Message], [s].[Phone], [s].[SentAt]
+FROM [SmsMessages] AS [s]
+WHERE [s].[Id] = @p
+2026-02-20 17:01:32.923 +03:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[SimpleApi.Models.SmsEntity, SimpleApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-20 17:01:32.931 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.GetSmsById (SimpleApi) in 237.7771ms
+2026-02-20 17:01:32.933 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.GetSmsById (SimpleApi)'
+2026-02-20 17:01:32.936 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Sms/1 - 200 null application/json; charset=utf-8 272.2909ms
+2026-02-20 17:01:46.674 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/sms/send - application/json 66
+2026-02-20 17:01:46.678 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 17:01:46.679 +03:00 [INF] Route matched with {action = "SendSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendSms(SimpleApi.Models.SendSmsRequest) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 17:01:46.697 +03:00 [INF] SMS isteği alındı. Numara: 5551112233
+2026-02-20 17:01:46.709 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [SmsMessages] ([Message], [Phone], [SentAt])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-02-20 17:01:46.715 +03:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 17:01:46.718 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.SendSms (SimpleApi) in 35.7734ms
+2026-02-20 17:01:46.720 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.SendSms (SimpleApi)'
+2026-02-20 17:01:46.721 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/sms/send - 200 null application/json; charset=utf-8 46.4029ms
+2026-02-20 17:02:01.614 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5035/api/Sms/1 - null null
+2026-02-20 17:02:01.621 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.SmsController.DeleteSms (SimpleApi)'
+2026-02-20 17:02:01.633 +03:00 [INF] Route matched with {action = "DeleteSms", controller = "Sms"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteSms(Int32) on controller SimpleApi.Controllers.SmsController (SimpleApi).
+2026-02-20 17:02:01.653 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Message], [s].[Phone], [s].[SentAt]
+FROM [SmsMessages] AS [s]
+WHERE [s].[Id] = @p
+2026-02-20 17:02:01.684 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [SmsMessages]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-02-20 17:02:01.699 +03:00 [INF] Executing OkObjectResult, writing value of type 'SimpleApi.Models.ApiResponse`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 17:02:01.704 +03:00 [INF] Executed action SimpleApi.Controllers.SmsController.DeleteSms (SimpleApi) in 65.884ms
+2026-02-20 17:02:01.709 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.SmsController.DeleteSms (SimpleApi)'
+2026-02-20 17:02:01.712 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5035/api/Sms/1 - 200 null application/json; charset=utf-8 97.155ms
+2026-02-20 17:04:42.365 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 17:04:42.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.8165ms
+2026-02-20 17:04:42.519 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/favicon.ico - null null
+2026-02-20 17:04:42.523 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/favicon.ico - 404 0 null 4.6989ms
+2026-02-20 17:04:42.529 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/favicon.ico, Response status code: 404
+2026-02-20 17:28:01.913 +03:00 [INF] Application is shutting down...
+2026-02-20 18:06:50.059 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-20 18:06:50.098 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-20 18:06:50.114 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-20 18:06:50.169 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-20 18:06:50.179 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-20 18:06:50.182 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-20 18:06:50.190 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-20 18:06:50.199 +03:00 [INF] Applying migration '20260220150531_InitialCreate'.
+2026-02-20 18:06:50.212 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Username] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [Role] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2026-02-20 18:06:50.216 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260220150531_InitialCreate', N'10.0.3');
+2026-02-20 18:06:50.219 +03:00 [INF] Applying migration '20260220150609_UpdateUserTable'.
+2026-02-20 18:06:50.224 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260220150609_UpdateUserTable', N'10.0.3');
+2026-02-20 18:06:50.229 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-02-20 18:33:57.363 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-20 18:33:57.397 +03:00 [INF] Creating key {0e019551-3811-4494-9195-7674f511c37c} with creation date 2026-02-20 15:33:57Z, activation date 2026-02-20 15:33:57Z, and expiration date 2026-05-21 15:33:57Z.
+2026-02-20 18:33:57.412 +03:00 [INF] Writing data to file 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys\key-0e019551-3811-4494-9195-7674f511c37c.xml'.
+2026-02-20 18:33:57.488 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 18:33:57.493 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 18:33:57.494 +03:00 [INF] Hosting environment: Development
+2026-02-20 18:33:57.497 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 18:34:03.701 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 18:34:03.872 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 173.5922ms
+2026-02-20 18:34:03.940 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - null null
+2026-02-20 18:34:03.946 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 18:34:03.948 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - null null
+2026-02-20 18:34:03.950 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - null null
+2026-02-20 18:34:03.951 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.js - null null
+2026-02-20 18:34:04.006 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 59.1035ms
+2026-02-20 18:34:04.007 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.js - 200 null application/javascript;charset=utf-8 56.2999ms
+2026-02-20 18:34:04.009 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui.css - 200 23649 text/css 70.5474ms
+2026-02-20 18:34:04.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-standalone-preset.js - 200 77354 text/javascript 72.8794ms
+2026-02-20 18:34:04.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/swagger-ui-bundle.js - 200 424834 text/javascript 74.8481ms
+2026-02-20 18:34:04.215 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 18:34:04.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 18:34:04.244 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 4.9517ms
+2026-02-20 18:34:04.432 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 217.2692ms
+2026-02-20 18:34:45.341 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/register - application/json 65
+2026-02-20 18:34:45.360 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 18:34:45.428 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:34:45.467 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SimpleApi.DTOs.RegisterDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:34:47.157 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @model_Email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-20 18:34:47.632 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-20 18:34:47.674 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-02-20 18:34:47.681 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Register (SimpleApi) in 2203.6026ms
+2026-02-20 18:34:47.686 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:34:47.699 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/register - 200 null text/plain; charset=utf-8 2357.3709ms
+2026-02-20 18:35:55.239 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:35:55.252 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:35:55.279 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:35:55.601 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:35:56.112 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 18:35:56.119 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 828.7228ms
+2026-02-20 18:35:56.120 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:35:56.122 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 883.3342ms
+2026-02-20 18:36:57.380 +03:00 [INF] Application is shutting down...
+2026-02-20 18:39:40.505 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-20 18:39:40.578 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 18:39:40.581 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 18:39:40.582 +03:00 [INF] Hosting environment: Development
+2026-02-20 18:39:40.583 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 18:39:46.025 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 18:39:46.170 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 147.0837ms
+2026-02-20 18:39:46.218 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 18:39:46.268 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 51.4249ms
+2026-02-20 18:39:46.517 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 18:39:46.519 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 18:39:46.529 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 9.8218ms
+2026-02-20 18:39:46.736 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 218.8872ms
+2026-02-20 18:40:36.120 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:40:36.137 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 18:40:36.196 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:40:36.206 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:40:36.209 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 88.7372ms
+2026-02-20 18:42:25.130 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 64
+2026-02-20 18:42:25.149 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:42:25.190 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:42:26.515 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:42:27.013 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2026-02-20 18:42:27.018 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 1820.1281ms
+2026-02-20 18:42:27.020 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:42:27.034 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 401 null text/plain; charset=utf-8 1904.0734ms
+2026-02-20 18:42:44.618 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/register - application/json 64
+2026-02-20 18:42:44.625 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:42:44.642 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SimpleApi.DTOs.RegisterDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:42:44.779 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @model_Email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-20 18:42:44.785 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-02-20 18:42:44.786 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Register (SimpleApi) in 141.7027ms
+2026-02-20 18:42:44.788 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:42:44.790 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/register - 400 null text/plain; charset=utf-8 172.0542ms
+2026-02-20 18:42:57.045 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/register - application/json 65
+2026-02-20 18:42:57.050 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:42:57.051 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SimpleApi.DTOs.RegisterDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:42:57.091 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @model_Email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-20 18:42:57.529 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-20 18:42:57.580 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-02-20 18:42:57.585 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Register (SimpleApi) in 531.588ms
+2026-02-20 18:42:57.588 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:42:57.591 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/register - 200 null text/plain; charset=utf-8 545.5744ms
+2026-02-20 18:43:09.069 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:43:09.081 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:43:09.086 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:43:09.105 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:43:09.328 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 18:43:09.338 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 241.6505ms
+2026-02-20 18:43:09.340 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:43:09.342 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 272.0762ms
+2026-02-20 18:43:15.485 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:43:15.499 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:43:15.503 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:43:15.505 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 20.1922ms
+2026-02-20 18:43:34.812 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:43:34.825 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:43:34.830 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:43:34.835 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 23.4083ms
+2026-02-20 18:44:25.118 +03:00 [INF] Application is shutting down...
+2026-02-20 18:45:11.496 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-20 18:45:11.570 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 18:45:11.573 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 18:45:11.574 +03:00 [INF] Hosting environment: Development
+2026-02-20 18:45:11.575 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 18:45:17.091 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 18:45:17.345 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 258.5567ms
+2026-02-20 18:45:17.401 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 18:45:17.450 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 50.7003ms
+2026-02-20 18:45:17.555 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 18:45:17.556 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 18:45:17.566 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 9.8241ms
+2026-02-20 18:45:17.798 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 243.3171ms
+2026-02-20 18:45:30.286 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:45:30.305 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 18:45:30.366 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:45:30.377 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:45:30.381 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 95.6546ms
+2026-02-20 18:45:48.563 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:45:48.575 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:45:48.608 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:45:50.293 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:45:50.793 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 18:45:50.806 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 2189.1895ms
+2026-02-20 18:45:50.808 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:45:50.816 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 2252.641ms
+2026-02-20 18:46:02.867 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:46:02.890 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:46:02.898 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:46:02.906 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 39.5134ms
+2026-02-20 18:46:43.264 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:46:43.277 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:46:43.282 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:46:43.287 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 22.5529ms
+2026-02-20 18:47:48.888 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 18:47:48.902 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 13.6491ms
+2026-02-20 18:47:48.943 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 18:47:48.959 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 15.7302ms
+2026-02-20 18:47:49.077 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 18:47:49.081 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 18:47:49.093 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 12.8153ms
+2026-02-20 18:47:49.095 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7173ms
+2026-02-20 18:48:17.451 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:48:17.458 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:48:17.461 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:48:17.598 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:48:17.922 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 18:48:17.925 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 460.0644ms
+2026-02-20 18:48:17.928 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:48:17.930 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 478.5004ms
+2026-02-20 18:48:19.990 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:48:20.001 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:48:20.007 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:48:20.125 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:48:20.321 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 18:48:20.324 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 303.9488ms
+2026-02-20 18:48:20.326 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:48:20.327 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 337.4865ms
+2026-02-20 18:48:30.238 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 18:48:30.246 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-20 18:48:30.251 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-20 18:48:30.257 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 401 0 null 19.183ms
+2026-02-20 18:49:26.639 +03:00 [INF] Application is shutting down...
+2026-02-20 18:55:58.046 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-20 18:55:58.126 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 18:55:58.129 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 18:55:58.130 +03:00 [INF] Hosting environment: Development
+2026-02-20 18:55:58.131 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 18:56:02.165 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 18:56:02.315 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 150.8337ms
+2026-02-20 18:56:02.371 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 18:56:02.410 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 40.2629ms
+2026-02-20 18:56:02.522 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 18:56:02.528 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 18:56:02.536 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 7.6339ms
+2026-02-20 18:56:02.747 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 225.3226ms
+2026-02-20 18:56:18.009 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:56:18.019 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 18:56:18.060 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:56:18.099 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:56:19.891 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:56:20.407 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 2297.5757ms
+2026-02-20 18:56:20.410 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:56:20.413 +03:00 [ERR] Beklenmeyen hata oluştu
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '208' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SimpleApi.Controllers.AuthController.GenerateJwtToken(User user) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 91
+   at SimpleApi.Controllers.AuthController.Login(LoginDto model) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+2026-02-20 18:56:20.455 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 500 null application/json 2446.9711ms
+2026-02-20 18:56:51.552 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:56:51.563 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:56:51.566 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:56:51.711 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:56:52.008 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 438.8547ms
+2026-02-20 18:56:52.010 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:56:52.011 +03:00 [ERR] Beklenmeyen hata oluştu
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '208' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SimpleApi.Controllers.AuthController.GenerateJwtToken(User user) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 91
+   at SimpleApi.Controllers.AuthController.Login(LoginDto model) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+2026-02-20 18:56:52.022 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 500 null application/json 469.8991ms
+2026-02-20 18:57:26.734 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:57:26.754 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:57:26.762 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:57:26.839 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:57:27.079 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 305.6533ms
+2026-02-20 18:57:27.083 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:57:27.087 +03:00 [ERR] Beklenmeyen hata oluştu
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '208' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SimpleApi.Controllers.AuthController.GenerateJwtToken(User user) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 91
+   at SimpleApi.Controllers.AuthController.Login(LoginDto model) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+2026-02-20 18:57:27.115 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 500 null application/json 381.2937ms
+2026-02-20 18:58:22.433 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/register - application/json 65
+2026-02-20 18:58:22.438 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:58:22.459 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(SimpleApi.DTOs.RegisterDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:58:22.523 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @model_Email) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-20 18:58:22.836 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [PasswordHash], [Role], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2026-02-20 18:58:22.890 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-02-20 18:58:22.895 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Register (SimpleApi) in 433.5871ms
+2026-02-20 18:58:22.898 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Register (SimpleApi)'
+2026-02-20 18:58:22.901 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/register - 200 null text/plain; charset=utf-8 467.8532ms
+2026-02-20 18:58:29.866 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 18:58:29.873 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:58:29.878 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 18:58:29.887 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 18:58:30.091 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 208.8181ms
+2026-02-20 18:58:30.093 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 18:58:30.095 +03:00 [ERR] Beklenmeyen hata oluştu
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '208' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at SimpleApi.Controllers.AuthController.GenerateJwtToken(User user) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 91
+   at SimpleApi.Controllers.AuthController.Login(LoginDto model) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\AuthController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SimpleApi.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ulasd\OneDrive\Desktop\SimpleApi\Controllers\Middleware\ExceptionMiddleware.cs:line 21
+2026-02-20 18:58:30.102 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 500 null application/json 236.6771ms
+2026-02-20 19:00:28.858 +03:00 [INF] Application is shutting down...
+2026-02-20 19:00:38.474 +03:00 [INF] User profile is available. Using 'C:\Users\ulasd\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-20 19:00:38.577 +03:00 [INF] Now listening on: http://localhost:5035
+2026-02-20 19:00:38.580 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-20 19:00:38.582 +03:00 [INF] Hosting environment: Development
+2026-02-20 19:00:38.584 +03:00 [INF] Content root path: C:\Users\ulasd\OneDrive\Desktop\SimpleApi
+2026-02-20 19:00:58.432 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/Auth/login - application/json 65
+2026-02-20 19:00:58.521 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-02-20 19:00:58.579 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 19:00:58.626 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 19:01:00.413 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 19:01:00.834 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 19:01:00.852 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 2217.1247ms
+2026-02-20 19:01:00.856 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 19:01:00.874 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/Auth/login - 200 null application/json; charset=utf-8 2445.2965ms
+2026-02-20 19:08:40.725 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.html - null null
+2026-02-20 19:08:40.852 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.html - 200 null text/html;charset=utf-8 127.9598ms
+2026-02-20 19:08:40.890 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/index.css - null null
+2026-02-20 19:08:40.920 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/index.css - 304 null null 30.2313ms
+2026-02-20 19:08:41.028 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - null null
+2026-02-20 19:08:41.029 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - null null
+2026-02-20 19:08:41.035 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/favicon-32x32.png - 304 null null 6.2217ms
+2026-02-20 19:08:41.269 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 241.523ms
+2026-02-20 19:09:46.172 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/auth/login - application/json 68
+2026-02-20 19:09:46.182 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 19:09:46.185 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(SimpleApi.DTOs.LoginDto) on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 19:09:46.323 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@model_Email='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[PasswordHash], [u].[Role], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @model_Email
+2026-02-20 19:09:46.590 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-20 19:09:46.592 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Login (SimpleApi) in 401.874ms
+2026-02-20 19:09:46.594 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Login (SimpleApi)'
+2026-02-20 19:09:46.595 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/auth/login - 200 null application/json; charset=utf-8 423.0567ms
+2026-02-20 19:11:37.657 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/AuthController/secure - null 0
+2026-02-20 19:11:37.702 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'd__ibPUz2y-nCnpEHfy-buz_gUUA6GLQ30vSRQcDug4'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-20 19:11:37.721 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'd__ibPUz2y-nCnpEHfy-buz_gUUA6GLQ30vSRQcDug4'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-02-20 19:11:37.727 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/AuthController/secure - 404 0 null 69.0699ms
+2026-02-20 19:11:37.731 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5035/api/AuthController/secure, Response status code: 404
+2026-02-20 19:12:11.890 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5035/api/AuthController/secure - null 0
+2026-02-20 19:12:11.933 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5035/api/AuthController/secure - 404 0 null 43.5066ms
+2026-02-20 19:12:11.936 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5035/api/AuthController/secure, Response status code: 404
+2026-02-20 19:12:28.274 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/AuthController/secure - null null
+2026-02-20 19:12:28.279 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/AuthController/secure - 404 0 null 4.4735ms
+2026-02-20 19:12:28.282 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/api/AuthController/secure, Response status code: 404
+2026-02-20 19:13:15.609 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/AuthController/secure - null null
+2026-02-20 19:13:15.613 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/AuthController/secure - 404 0 null 3.5643ms
+2026-02-20 19:13:15.619 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5035/api/AuthController/secure, Response status code: 404
+2026-02-20 19:13:57.105 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5035/api/Auth/secure - null null
+2026-02-20 19:13:57.115 +03:00 [INF] Executing endpoint 'SimpleApi.Controllers.AuthController.Secure (SimpleApi)'
+2026-02-20 19:13:57.119 +03:00 [INF] Route matched with {action = "Secure", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Secure() on controller SimpleApi.Controllers.AuthController (SimpleApi).
+2026-02-20 19:13:57.132 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-02-20 19:13:57.134 +03:00 [INF] Executed action SimpleApi.Controllers.AuthController.Secure (SimpleApi) in 12.2093ms
+2026-02-20 19:13:57.136 +03:00 [INF] Executed endpoint 'SimpleApi.Controllers.AuthController.Secure (SimpleApi)'
+2026-02-20 19:13:57.137 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5035/api/Auth/secure - 200 null text/plain; charset=utf-8 31.9582ms
+2026-02-20 19:17:07.360 +03:00 [INF] Application is shutting down...
